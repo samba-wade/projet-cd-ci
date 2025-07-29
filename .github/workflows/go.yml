@@ -43,7 +43,11 @@ jobs:
         run: |
           npm install -g @salesforce/cli@latest
           echo "y" | npm install sfdx-git-delta@3.3.0 -g
-
+      # sf plugins install sfdx-git-delta@v6.0.0
+      - name: sf plugins install sfdx-git-delta@v6.0.0
+        run: |
+         sf plugins install sfdx-git-delta@v6.0.0
+         
       # Étape 6 : Authentification via JWT avec les identifiants secrets GitHub
       - name: Authentification Salesforce
         env:
