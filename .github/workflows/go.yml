@@ -60,7 +60,7 @@ jobs:
             --client-id $SF_CONSUMER_KEY \
             --jwt-key-file server.key \
             --username $SF_USERNAME \
-            --alias ci-org \
+            --alias devTmp \
             --instance-url $SF_INSTANCE_URL
 
       # Étape 7 : Générer le delta de métadonnées (diff entre HEAD et origin/dev)
