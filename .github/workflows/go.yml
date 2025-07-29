@@ -53,6 +53,7 @@ jobs:
           SF_CONSUMER_KEY: ${{ secrets.SF_CONSUMER_KEY }}
           SF_USERNAME: ${{ secrets.SF_USERNAME }}
           SF_INSTANCE_URL: ${{secrets.INSTANCE_URL }}
+          SF_ACCESS_TOKEN_CLI: ${{secrets.SF_ACCESS_TOKEN_CLI}}
         run: |
           echo "$SF_SERVER_KEY" > server.key
           sf org login jwt \
