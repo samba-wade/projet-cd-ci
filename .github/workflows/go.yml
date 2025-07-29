@@ -51,11 +51,12 @@ jobs:
           SF_SECURITY_TOKEN : ${{ secrets.SECURITY_TOKEN }}
           SF_SERVER_KEY: ${{ secrets.SF_SERVER_KEY }}
           SF_CONSUMER_KEY: ${{ secrets.SF_CONSUMER_KEY }}
+          SF_CUSTOMER_SECRET: ${{ secrets.SF_CUSTOMER_SECRET }}
           SF_USERNAME: ${{ secrets.SF_USERNAME }}
           SF_INSTANCE_URL: ${{secrets.INSTANCE_URL }}
           SF_ACCESS_TOKEN_CLI: ${{secrets.SF_ACCESS_TOKEN_CLI}}
         run: |
-          echo "$SF_SERVER_KEY" > server.key
+          echo "$SF_CUSTOMER_SECRET" > server.key
           sf org login jwt \
             --client-id $SF_CONSUMER_KEY \
             --jwt-key-file server.key \
