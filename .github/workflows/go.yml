@@ -61,7 +61,7 @@ jobs:
             --client-id $SF_CONSUMER_KEY \
             --jwt-key-file server.key \
             --username $SF_USERNAME \
-            --alias cidev \
+            --alias cdcidev \
             --instance-url $SF_INSTANCE_URL
 
       # Étape 7 : Générer le delta de métadonnées (diff entre HEAD et origin/dev)
@@ -74,7 +74,7 @@ jobs:
       - name: Run Apex Tests and Get Code Coverage
         run: |
           sf apex run test \
-            --target-org ci-org \
+            --target-org cdcidev \
             --result-format human \
             --code-coverage \
             --output-dir test-results \
@@ -87,7 +87,7 @@ jobs:
           sf project deploy start \
             --manifest .temp/package/package.xml \
             --source-dir .temp/force-app \
-            --target-org ci-org \
+            --target-org cdcidev \
             --ignore-conflicts \
             --wait 10 \
             --verbose
