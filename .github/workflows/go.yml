@@ -72,7 +72,7 @@ jobs:
       - name: Generate metadata delta pull request
         run: |
           mkdir -p .temp
-          sfdx sgd:source:delta --to HEAD --from origin/dev --output .temp
+          sfdx sgd:source:delta --to origin/main --from origin/dev --output .temp
         #sf sgd source delta --to HEAD --from origin/dev --output .temp
 
       # Étape 8 : Couverture des tests Apex
