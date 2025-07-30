@@ -2,8 +2,8 @@
 public with sharing class AP_Calculateur_Test {
     @isTest static void testsomme(){
         Test.startTest();
-          Integer result=AP_Calculateur.somme(1,2);
+          Integer result=AP_Calculateur.somme(2,2);
         Test.stopTest();
-        Assert.areEqual(3, result, 'test somme ok');
+        Assert.areEqual(4, result, 'test somme ok');
     }
 }
