@@ -46,7 +46,7 @@ jobs:
       # sf plugins install sfdx-git-delta@v6.0.0
       - name: sf plugins install sfdx-git-delta@v6.0.0
         run: |
-         npm install sfdx-git-delta@v6.0.0
+         npm plugins install sfdx-git-delta@v6.0.0
          echo "y"
          
       # Étape 6 : Authentification via JWT avec les identifiants secrets GitHub
@@ -73,7 +73,7 @@ jobs:
       - name: Generate metadata delta pull request
         run: |
           mkdir -p .temp
-          sfdx sgd:source:delta --to HEAD --from origin/dev --output .temp
+          sf sgd source delta --to HEAD --from origin/dev --output .temp
 
       # Étape 8 : Couverture des tests Apex
       - name: Run Apex Tests and Get Code Coverage
