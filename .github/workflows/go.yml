@@ -46,7 +46,7 @@ jobs:
       # sf plugins install sfdx-git-delta@v6.0.0
       - name: sf plugins install sfdx-git-delta@v6.0.0
         run: |
-         npm plugins install sfdx-git-delta@v6.0.0
+         npm install sfdx-git-delta@v6.0.0
          echo "y"
          
       # Étape 6 : Authentification via JWT avec les identifiants secrets GitHub
